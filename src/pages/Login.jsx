@@ -144,7 +144,6 @@ const Login = () => {
               </p>
               <ChartCarousel />
             </div>
-            
             {/* Decorative circles */}
             <div className="absolute bottom-0 right-0 w-64 h-64 bg-white/10 rounded-full -mr-32 -mb-32"></div>
             <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
