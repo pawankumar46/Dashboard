@@ -1,0 +1,273 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind utilities;
+:root {
+  /* Primary Colors */
+  --primary-50: #f0f4f8;
+  --primary-100: #d9e2ec;
+  --primary-200: #bcccdc;
+  --primary-300: #9fb3c8;
+  --primary-400: #829ab1;
+  --primary-500: #627d98;
+  --primary-600: #486581;
+  --primary-700: #334e68;
+  --primary-800: #243b53;
+  --primary-900: #102a43;
+
+  /* Accent Colors */
+  --accent-50: #fff5f5;
+  --accent-100: #ffe3e3;
+  --accent-200: #ffc9c9;
+  --accent-300: #ffa8a8;
+  --accent-400: #ff8787;
+  --accent-500: #ff6b6b;
+  --accent-600: #fa5252;
+  --accent-700: #f03e3e;
+  --accent-800: #e03131;
+  --accent-900: #c92a2a;
+
+  /* Neutral Colors */
+  --neutral-50: #f8fafc;
+  --neutral-100: #f1f5f9;
+  --neutral-200: #e2e8f0;
+  --neutral-300: #cbd5e1;
+  --neutral-400: #94a3b8;
+  --neutral-500: #64748b;
+  --neutral-600: #475569;
+  --neutral-700: #334155;
+  --neutral-800: #1e293b;
+  --neutral-900: #0f172a;
+
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #F9FAFB;
+  color: #111827;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Common Component Styles */
+.card {
+  @apply bg-white rounded-xl shadow-sm p-6;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-[#486581] to-[#334e68] text-white px-4 py-2 rounded-lg hover:from-[#334e68] hover:to-[#243b53] transition-all duration-300;
+}
+
+.btn-secondary {
+  @apply bg-white text-[#334e68] border border-[#bcccdc] px-4 py-2 rounded-lg hover:bg-[#f0f4f8] transition-all duration-300;
+}
+
+.input-field {
+  @apply w-full px-4 py-2 border border-[#e2e8f0] rounded-lg focus:ring-2 focus:ring-[#627d98] focus:border-transparent outline-none transition-all duration-300;
+}
+
+/* Chart Colors */
+.chart-primary {
+  @apply bg-[#627d98]/20 border-[#627d98];
+}
+
+.chart-secondary {
+  @apply bg-[#ff6b6b]/20 border-[#ff6b6b];
+}
+
+.chart-tertiary {
+  @apply bg-[#64748b]/20 border-[#64748b];
+}
+
+/* Navigation Styles */
+.nav-link {
+  @apply flex items-center px-4 py-3 text-[#475569] rounded-lg hover:bg-[#f0f4f8] hover:text-[#334e68] transition-all duration-300;
+}
+
+.nav-link.active {
+  @apply bg-[#f0f4f8] text-[#334e68];
+}
+
+/* Table Styles */
+.table-container {
+  @apply bg-white rounded-xl shadow-sm overflow-hidden;
+}
+
+.table-header {
+  @apply bg-[#f0f4f8] text-[#334e68] font-medium;
+}
+
+.table-row {
+  @apply hover:bg-[#f0f4f8]/50 transition-colors duration-200;
+}
+
+/* Form Styles */
+.form-label {
+  @apply block text-sm font-medium text-[#475569] mb-1;
+}
+
+.form-error {
+  @apply text-[#fa5252] text-sm mt-1;
+}
+
+/* Badge Styles */
+.badge {
+  @apply px-2 py-1 text-xs font-medium rounded-full;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-error {
+  @apply bg-[#ffe3e3] text-[#e03131];
+}
+
+/* Animation Classes */
+.fade-in {
+  @apply transition-opacity duration-300 ease-in-out;
+}
+
+.slide-in {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    @apply p-4;
+  }
+  
+  .btn-primary, .btn-secondary {
+    @apply px-3 py-1.5 text-sm;
+  }
+}
+
+button {
+  margin-top: 20px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #a49b9b;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #f5f1f1;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+@keyframes growBar {
+  from {
+    opacity: 0;
+    transform: scaleY(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+.animated-bar:hover {
+  background-color: rgba(255, 255, 255, 0.064);
+  transform: scaleY(1.1);
+}
+
+@keyframes slideUp {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+.graph-bar {
+  transform-origin: bottom;
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.graph-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  height: 100px;
+  margin-top: 2rem;
+}
+
+@keyframes slideUp {
+  from {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  from {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.animate-drawLine {
+  animation: drawLine 2s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 8s linear infinite;
+}
