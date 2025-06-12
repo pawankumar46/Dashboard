@@ -187,7 +187,7 @@ const Login = () => {
                 type="email"
                 name="email"
                 className="w-full h-12 px-4 border-2 border-gray-300 rounded-xl focus:border-[#124e66] focus:ring-0 transition-all text-gray-900"
-                placeholder="you@example.com"
+                placeholder="test@example.com"
                 value={formData.email}
                 onChange={handleChange}
                 required
@@ -202,7 +202,7 @@ const Login = () => {
                 type="password"
                 name="password"
                 className="w-full h-12 px-4 border-2 border-gray-300 rounded-xl focus:border-[#124e66] focus:ring-0 transition-all text-gray-900"
-                placeholder="••••••••"
+                placeholder="password123"
                 value={formData.password}
                 onChange={handleChange}
                 required
