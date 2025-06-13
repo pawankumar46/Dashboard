@@ -208,7 +208,6 @@ const Login = () => {
                 required
               />
             </div>
-
             {!isLoginView && (
               <div>
                 <label className="block text-sm font-medium text-gray-900 mb-2">
